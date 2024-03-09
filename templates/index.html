@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plotly Graph Example</title>
+
+</head>
+<body>
+    <div id="plotly-express-figure"></div>
+ <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        var graphData = {{ graph_json | tojson|safe }};
+        Plotly.newPlot('plotly-express-figure', graphData.data, graphData.layout);
+
+    </script>
+</body>
+</html>
